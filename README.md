@@ -50,7 +50,7 @@
             void commentPost(long);
         }
         ```
-    - Comments
+    - Comment
         ```
         public class social.media.Comment {
             social.media.Comment(long, long, java.lang.String);
