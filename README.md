@@ -8,7 +8,7 @@
 ## Introduction
 
 - Implementation of a Social Media Application
-- Using Class Heirarchy
+- Using Class Hierarchy
 - Handle Object Relationships
 
 ## Requirement

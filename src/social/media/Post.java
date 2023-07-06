@@ -54,9 +54,14 @@ public class Post {
 
     int editPost(String title, String text) {
         // Perform operation
-        setTitle(title);
-        setText(text);
-        return 1;
+        try {
+            setTitle(title);
+            setText(text);
+            return 1;
+        } catch(Exception e) {
+            System.out.println(e.getMessage());
+            return 0;
+        }
     }
 
     private void setTitle(String title) {
@@ -120,6 +125,18 @@ public class Post {
             return;
         }
         Notification.notify(NotificationType.SUCCESS, "Comment Created");
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getMedia() {
+        return media;
     }
 }
 

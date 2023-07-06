@@ -1,13 +1,20 @@
 package social.media;
 
 public class Comment {
-    private long id, post, creator;
+    private final long id, post, creator;
     private String message;
     private static long lastCommentId;
-    Comment(long postId, long creatorId, String message) {
+    public Comment(long postId, long creatorId, String message) {
         id = ++lastCommentId;
         this.post = postId;
         this.creator = creatorId;
+        this.message = message;
+    }
+    public int editComment(String message) {
+        setMessage(message);
+        return 1;
+    }
+    private void setMessage(String message) {
         this.message = message;
     }
     long getId() {
@@ -19,7 +26,8 @@ public class Comment {
     long getPostId() {
         return post;
     }
-    String getMessage() {
+    public String getMessage() {
         return message;
     }
+
 }

@@ -39,4 +39,12 @@ public class Posts {
         }
         return posts;
     }
+    public static ArrayList<Post> getPosts() {
+        ArrayList<Post> posts = new ArrayList<>();
+        for (Post post : data.values()) {
+            if (post.getVisibility() == Visibility.PUBLIC)
+                posts.add(post);
+        }
+        return posts;
+    }
 }
