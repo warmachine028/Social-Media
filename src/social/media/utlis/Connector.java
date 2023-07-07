@@ -80,6 +80,7 @@ public class Connector {
             statement.execute("DROP TABLE Posts");
             statement.execute("DROP TABLE Users");
             statement.execute("DROP TABLE Comments");
+            statement.execute("PRAGMA foreign_keys = ON;");
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
